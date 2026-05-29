@@ -309,41 +309,38 @@ export default function Home() {
           )}
         </div>
 
-        <div className="bg-white shadow-sm md:hidden">
-          <div className="mx-auto flex max-w-7xl flex-col items-center gap-3 px-4 py-3">
-            <a href="#" className={`flex items-center justify-center transition-all duration-300 ${scrolled ? "max-h-0 overflow-hidden opacity-0" : "opacity-100"}`}>
+        <div className="bg-white/95 shadow-sm backdrop-blur md:hidden">
+          <div className="mx-auto grid max-w-7xl grid-cols-[92px_1fr_auto] items-center gap-3 px-4 py-3">
+            <a href="#" className="flex items-center justify-start">
               <Image
                 src="/images/logo.jpg"
                 alt="Connect Design & Build"
-                width={148}
-                height={76}
+                width={104}
+                height={54}
                 className="object-contain"
-                style={{ width: "148px", height: "auto" }}
+                style={{ width: "92px", height: "auto" }}
                 priority
               />
             </a>
 
-            <div className="grid w-full grid-cols-[1fr_auto] gap-2">
-              <a
-                href="tel:07875196719"
-                className="mobile-call-wobble rounded-full bg-[#e6884b] px-3 py-3 text-center text-xs font-black uppercase tracking-[0.08em] text-white transition hover:bg-black"
-              >
-                Call Now
-              </a>
+            <a
+              href="tel:07875196719"
+              className="mobile-call-wobble rounded-full bg-[#e6884b] px-3 py-3 text-center text-xs font-black uppercase tracking-[0.08em] text-white transition hover:bg-black"
+            >
+              Call Now
+            </a>
 
-
-              <button
-                onClick={() => setMenuOpen(!menuOpen)}
-                aria-label="Toggle menu"
-                className="flex h-11 w-12 items-center justify-center rounded-full border border-black/15 bg-white"
-              >
-                <span className="flex flex-col gap-1.5">
-                  <span className="block h-0.5 w-5 rounded-full bg-black" />
-                  <span className="block h-0.5 w-5 rounded-full bg-black" />
-                  <span className="block h-0.5 w-5 rounded-full bg-black" />
-                </span>
-              </button>
-            </div>
+            <button
+              onClick={() => setMenuOpen(!menuOpen)}
+              aria-label="Toggle menu"
+              className="flex h-11 w-11 items-center justify-center rounded-full border border-black/15 bg-white"
+            >
+              <span className="flex flex-col gap-1.5">
+                <span className="block h-0.5 w-5 rounded-full bg-black" />
+                <span className="block h-0.5 w-5 rounded-full bg-black" />
+                <span className="block h-0.5 w-5 rounded-full bg-black" />
+              </span>
+            </button>
           </div>
 
           {menuOpen && (
@@ -361,34 +358,52 @@ export default function Home() {
       </header>
 
       <section className="relative h-screen overflow-hidden">
-  <div className="absolute inset-0 z-10 bg-gradient-to-r from-black/82 via-black/18 to-transparent" />
+  <div className="absolute inset-0 z-10 bg-gradient-to-b from-black/30 via-black/42 to-black/78 md:bg-gradient-to-r md:from-black/82 md:via-black/18 md:to-transparent" />
 
-  <div className="absolute inset-y-0 left-0 z-10 w-[40%] bg-gradient-to-r from-black/45 via-black/12 to-transparent" />
+  <div className="absolute inset-y-0 left-0 z-10 hidden w-[40%] bg-gradient-to-r from-black/45 via-black/12 to-transparent md:block" />
 
   <div className="absolute -left-24 top-1/2 z-10 h-[420px] w-[420px] -translate-y-1/2 rounded-full bg-[#e6884b]/10 blur-3xl md:h-[520px] md:w-[520px]" />
+
+  <Image
+    src="/images/kitchen.png"
+    alt="Luxury Connect Design & Build kitchen renovation"
+    fill
+    sizes="100vw"
+    className="object-cover saturate-[0.98] contrast-[1.04] brightness-[0.92] md:hidden"
+    style={{ objectPosition: "center center" }}
+    priority
+  />
 
   <Image
     src="/images/hero.png"
     alt="Connect Design & Build project"
     fill
     sizes="100vw"
-    className="object-cover saturate-[0.98] contrast-[1.04] brightness-[1.03]"
+    className="hidden object-cover saturate-[0.98] contrast-[1.04] brightness-[1.03] md:block"
     style={{ objectPosition: "center 48%" }}
     priority
   />
 
-        <div className="relative z-20 mx-auto flex h-full w-full max-w-7xl items-center px-4 pb-8 pt-[11.5rem] md:px-6 md:pb-8 md:pt-[205px] lg:pt-[205px]">
+        <div className="relative z-20 mx-auto flex h-full w-full max-w-7xl items-center px-4 pb-10 pt-[5.5rem] md:px-6 md:pb-8 md:pt-[205px] lg:pt-[205px]">
           <div className="flex h-full w-full items-center">
             <div className="max-w-[820px] animate-fade-up text-white">
               <p className="mb-3 inline-flex rounded-full bg-[#e6884b] px-4 py-2 text-[10px] font-black uppercase tracking-[0.22em] md:text-[11px]">
                 Design • Build • Invest
               </p>
 
-              <h1 className="max-w-[22ch] text-[2rem] font-black leading-[0.9] tracking-tight sm:text-[2.6rem] md:text-[3rem] lg:text-[3.25rem] xl:text-[3.45rem] 2xl:text-[3.6rem]">
+              <h1 className="max-w-[13ch] text-[2.45rem] font-black leading-[0.88] tracking-tight sm:text-[3rem] md:hidden">
+                High-end renovations across Cheshire.
+              </h1>
+
+              <h1 className="hidden max-w-[22ch] text-[3rem] font-black leading-[0.9] tracking-tight md:block lg:text-[3.25rem] xl:text-[3.45rem] 2xl:text-[3.6rem]">
                 High-end building, renovation & property development across Cheshire.
               </h1>
 
-              <div className="mt-4 grid w-full max-w-[260px] grid-cols-1 gap-4 md:mt-5 md:max-w-[500px] md:grid-cols-2">
+              <p className="mt-4 max-w-[26ch] text-sm font-bold leading-6 text-white/85 md:hidden">
+                Extensions • Kitchens • Bathrooms • Full Refurbishments
+              </p>
+
+              <div className="mt-5 grid w-full max-w-[300px] grid-cols-1 gap-4 md:mt-5 md:max-w-[500px] md:grid-cols-2">
                 <a
                   href="tel:07875196719"
                   className="hidden rounded-full bg-[#e6884b] px-4 py-3 text-center text-sm font-black text-white transition hover:bg-white hover:text-black md:block md:py-3.5"
