@@ -384,8 +384,8 @@ export default function Home() {
     priority
   />
 
-        <div className="relative z-20 mx-auto flex h-full w-full max-w-7xl items-center px-4 pb-10 pt-[5.5rem] md:px-6 md:pb-8 md:pt-[205px] lg:pt-[205px]">
-          <div className="flex h-full w-full items-center">
+        <div className="relative z-20 mx-auto w-full max-w-7xl px-4 md:px-6 md:pb-8 md:pt-[205px] lg:pt-[205px]">
+          <div className="flex h-[calc(100vh-92px)] items-center md:h-full"><div className="w-full translate-y-8 md:translate-y-0">
             <div className="max-w-[820px] animate-fade-up text-white">
               <p className="mb-3 inline-flex rounded-full bg-[#e6884b] px-4 py-2 text-[10px] font-black uppercase tracking-[0.22em] md:text-[11px]">
                 Design • Build • Invest
@@ -417,7 +417,7 @@ export default function Home() {
                 ))}
               </div>
 
-              <div className="mt-5 grid w-full max-w-[300px] grid-cols-1 gap-4 md:mt-5 md:max-w-[500px] md:grid-cols-2">
+              <div className="mt-5 grid w-full max-w-[270px] grid-cols-1 gap-4 md:mt-5 md:max-w-[500px] md:grid-cols-2">
                 <a
                   href="tel:07875196719"
                   className="hidden rounded-full bg-[#e6884b] px-4 py-3 text-center text-sm font-black text-white transition hover:bg-white hover:text-black md:block md:py-3.5"
@@ -432,6 +432,7 @@ export default function Home() {
                 </a>
               </div>
             </div>
+          </div>
           </div>
         </div>
       </section>
