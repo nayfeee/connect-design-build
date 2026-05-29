@@ -405,6 +405,8 @@ export default function Home() {
                   "Kitchens",
                   "Bathrooms",
                   "Full Refurbishments",
+                  "Loft Conversions",
+                  "Garden Rooms & Landscaping",
                 ].map((item) => (
                   <div key={item} className="flex items-center gap-2">
                     <span className="flex h-4 w-4 items-center justify-center rounded-full bg-[#e6884b] text-[10px] font-black leading-none text-white">
