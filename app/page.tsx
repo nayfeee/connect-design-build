@@ -384,8 +384,9 @@ export default function Home() {
     priority
   />
 
-        <div className="relative z-20 mx-auto w-full max-w-7xl px-4 md:px-6 md:pb-8 md:pt-[205px] lg:pt-[205px]">
-          <div className="flex h-[calc(100vh-92px)] items-center md:h-full"><div className="w-full translate-y-8 md:translate-y-0">
+        <div className="relative z-20 mx-auto flex h-full w-full max-w-7xl px-4 pt-[92px] md:px-6 md:pb-8 md:pt-[205px] lg:pt-[205px]">
+          <div className="flex h-[calc(100vh-92px)] w-full items-center md:h-full">
+            <div className="w-full translate-y-8 md:translate-y-0">
             <div className="max-w-[820px] animate-fade-up text-white">
               <p className="mb-3 inline-flex rounded-full bg-[#e6884b] px-4 py-2 text-[10px] font-black uppercase tracking-[0.22em] md:text-[11px]">
                 Design • Build • Invest
