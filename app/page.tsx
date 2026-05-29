@@ -357,7 +357,7 @@ export default function Home() {
         </div>
       </header>
 
-      <section className="relative h-screen overflow-hidden">
+      <section className="relative h-[100svh] overflow-hidden md:h-screen">
   <div className="absolute inset-0 z-10 bg-gradient-to-b from-black/30 via-black/42 to-black/78 md:bg-gradient-to-r md:from-black/82 md:via-black/18 md:to-transparent" />
 
   <div className="absolute inset-y-0 left-0 z-10 hidden w-[40%] bg-gradient-to-r from-black/45 via-black/12 to-transparent md:block" />
@@ -385,8 +385,8 @@ export default function Home() {
   />
 
         <div className="relative z-20 mx-auto flex h-full w-full max-w-7xl px-4 pt-[92px] md:px-6 md:pb-8 md:pt-[205px] lg:pt-[205px]">
-          <div className="flex h-[calc(100vh-92px)] w-full items-center md:h-full">
-            <div className="w-full translate-y-8 md:translate-y-0">
+          <div className="flex h-[calc(100svh-92px)] w-full items-center md:h-full">
+            <div className="w-full translate-y-3 md:translate-y-0">
             <div className="max-w-[820px] animate-fade-up text-white">
               <p className="mb-3 inline-flex rounded-full bg-[#e6884b] px-4 py-2 text-[10px] font-black uppercase tracking-[0.22em] md:text-[11px]">
                 Design • Build • Invest
