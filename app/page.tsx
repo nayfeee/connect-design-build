@@ -309,7 +309,7 @@ export default function Home() {
           )}
         </div>
 
-        <div className="bg-white/95 shadow-sm backdrop-blur md:hidden">
+        <div className="bg-white shadow-sm md:hidden">
           <div className="mx-auto grid max-w-7xl grid-cols-[92px_1fr_auto] items-center gap-3 px-4 py-3">
             <a href="#" className="flex items-center justify-start">
               <Image
@@ -317,7 +317,7 @@ export default function Home() {
                 alt="Connect Design & Build"
                 width={104}
                 height={54}
-                className="object-contain"
+                className="object-contain opacity-[0.96]"
                 style={{ width: "92px", height: "auto" }}
                 priority
               />
@@ -391,17 +391,29 @@ export default function Home() {
                 Design • Build • Invest
               </p>
 
-              <h1 className="max-w-[13ch] text-[2.45rem] font-black leading-[0.88] tracking-tight sm:text-[3rem] md:hidden">
-                High-end renovations across Cheshire.
+              <h1 className="max-w-[18ch] text-[2.25rem] font-black leading-[0.88] tracking-tight sm:text-[2.8rem] md:hidden">
+                High-end building, renovation & property development across Cheshire.
               </h1>
 
               <h1 className="hidden max-w-[22ch] text-[3rem] font-black leading-[0.9] tracking-tight md:block lg:text-[3.25rem] xl:text-[3.45rem] 2xl:text-[3.6rem]">
                 High-end building, renovation & property development across Cheshire.
               </h1>
 
-              <p className="mt-4 max-w-[26ch] text-sm font-bold leading-6 text-white/85 md:hidden">
-                Extensions • Kitchens • Bathrooms • Full Refurbishments
-              </p>
+              <div className="mt-4 grid gap-2 text-sm font-bold leading-5 text-white/90 md:hidden">
+                {[
+                  "Extensions",
+                  "Kitchens",
+                  "Bathrooms",
+                  "Full Refurbishments",
+                ].map((item) => (
+                  <div key={item} className="flex items-center gap-2">
+                    <span className="flex h-4 w-4 items-center justify-center rounded-full bg-[#e6884b] text-[10px] font-black leading-none text-white">
+                      ✓
+                    </span>
+                    <span>{item}</span>
+                  </div>
+                ))}
+              </div>
 
               <div className="mt-5 grid w-full max-w-[300px] grid-cols-1 gap-4 md:mt-5 md:max-w-[500px] md:grid-cols-2">
                 <a
