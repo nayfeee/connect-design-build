@@ -446,25 +446,45 @@ export default function Home() {
               Building, renovating and transforming homes across Cheshire.
             </h2>
           </div>
-          <div className="grid gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:items-center">
-            <div className="overflow-hidden rounded-[2rem] shadow-xl ring-1 ring-black/5">
-              <Image src="/images/kitchen.png" alt="Luxury kitchen renovation" width={1200} height={900}
-                className="h-full w-full object-cover transition duration-700 hover:scale-[1.03]" />
+          <div className="grid gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-stretch">
+            <div className="overflow-hidden rounded-[2rem] shadow-xl ring-1 ring-black/5 lg:h-full">
+              <Image
+                src="/images/kitchen.png"
+                alt="Luxury kitchen renovation"
+                width={1200}
+                height={900}
+                className="h-[520px] w-full object-cover transition duration-700 hover:scale-[1.03] sm:h-[620px] lg:h-full"
+              />
             </div>
-            <div className="space-y-6">
+
+            <div className="grid gap-3">
               {[
-                ["Full House Refurbishments","Complete transformations managed from strip-out through to final finish."],
-                ["High-End Kitchens","Premium kitchen renovations designed around modern living."],
-                ["Bathrooms","Beautiful, functional bathroom spaces finished to a high standard."],
-                ["Loft Conversions","Unlock valuable extra living space within your existing home."],
-                ["Extensions","Beautifully integrated extensions that create more space and add value."],
-                ["Garden Rooms & Offices","Purpose-built spaces for work, leisure and family life."],
-                ["Exterior Renovations & Landscaping","Improve kerb appeal with considered exterior and garden improvements."],
-              ].map(([title, copy]) => (
-                <div key={title} className="border-b border-black/10 pb-5 last:border-0">
-                  <div className="mb-3 h-1.5 w-12 rounded-full bg-[#e6884b]" />
-                  <h3 className="text-xl font-black tracking-tight">{title}</h3>
-                  <p className="mt-2 leading-7 text-black/65">{copy}</p>
+                ["01", "Full House Refurbishments","Complete transformations managed from strip-out through to final finish."],
+                ["02", "High-End Kitchens","Premium kitchen renovations designed around modern living."],
+                ["03", "Bathrooms","Beautiful, functional bathroom spaces finished to a high standard."],
+                ["04", "Loft Conversions","Unlock valuable extra living space within your existing home."],
+                ["05", "Extensions","Beautifully integrated extensions that create more space and add value."],
+                ["06", "Garden Rooms & Offices","Purpose-built spaces for work, leisure and family life."],
+                ["07", "Exterior Renovations & Landscaping","Improve kerb appeal with considered exterior and garden improvements."],
+              ].map(([number, title, copy]) => (
+                <div
+                  key={title}
+                  className="group rounded-[1.25rem] bg-[#101010] p-5 text-white shadow-sm ring-1 ring-white/10 transition duration-500 hover:-translate-y-0.5 hover:bg-[#151515] hover:shadow-xl"
+                >
+                  <div className="mb-3 flex items-center justify-between gap-4">
+                    <div className="h-1.5 w-10 rounded-full bg-[#e6884b]" />
+                    <span className="text-[10px] font-black tracking-[0.25em] text-white/30">
+                      {number}
+                    </span>
+                  </div>
+
+                  <h3 className="text-lg font-black tracking-tight md:text-xl">
+                    {title}
+                  </h3>
+
+                  <p className="mt-2 text-sm leading-6 text-white/65">
+                    {copy}
+                  </p>
                 </div>
               ))}
             </div>
